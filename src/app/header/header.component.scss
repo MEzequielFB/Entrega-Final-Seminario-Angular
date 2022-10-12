@@ -1,0 +1,46 @@
+header, header nav ul, header .botonesHeader {
+    display: flex;
+    justify-content: space-between;
+}
+header, header .botonesHeader button {
+    padding: 10px;
+}
+header {
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    background-color: rgba(41, 41, 73, 0.911);
+    z-index: 2;
+}
+header h1 {
+    font-size: 40px;
+}
+header nav {
+    width: 30%;
+}
+header nav ul li, header .botonesHeader button {
+    border-radius: 5px;
+}
+header nav ul li, header .botonesHeader button {
+    font-size: 18px;
+}
+header nav ul li {
+    color: rgb(76, 147, 167);
+    font-size: 18px;
+    padding: 12px;
+    border: 2px white solid;
+}
+header nav ul li:hover {
+    background-color: rgb(57, 57, 77);
+}
+header .botonesHeader {
+    width: 14%;
+}
+header .botonesHeader button {
+    background-color: rgb(58, 45, 87);
+    border: solid black 1px;
+    cursor: pointer;
+}
+span.remarcado {
+    color: rgb(76, 147, 167);
+}
