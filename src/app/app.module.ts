@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { FooterComponent } from './footer/footer.component';
 import { AnimesListaComponent } from './animes-lista/animes-lista.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BtnFavoritoComponent } from './btn-favorito/btn-favorito.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { AnimesListaComponent } from './animes-lista/animes-lista.component';
     HeaderComponent,
     InicioComponent,
     FooterComponent,
-    AnimesListaComponent
+    AnimesListaComponent,
+    BtnFavoritoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
