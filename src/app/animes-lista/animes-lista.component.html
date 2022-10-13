@@ -3,7 +3,7 @@
     <li *ngFor="let anime of animes" [ngClass]="{'favorito': anime.favorito}">
         <img [src]="anime.imagen" [alt]="anime.titulo">
         <p>{{anime.titulo}}</p>
-        <app-btn-favorito [favorito]="anime.favorito"></app-btn-favorito>
+        <app-btn-favorito [(favorito)]="anime.favorito" (favoritosSeteado)="gestionarFavoritos(anime)"></app-btn-favorito>
         <!-- <img src="../../assets/img/corazon-vacio.svg" alt="corazon" class="icono-corazon" (click)="setearFavorito(anime)" -->>
     </li>
 </ul>

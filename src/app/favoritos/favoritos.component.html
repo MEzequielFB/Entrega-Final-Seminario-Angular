@@ -1,0 +1,18 @@
+<h1>{{titulo}}</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Vistas</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let anime of animes_favoritos">
+            <td>{{anime.titulo}}</td>
+            <td>
+                {{anime.vistas}}
+                <img src="../../assets/img/icono premium hero.svg" alt="icono corona" *ngIf="anime.vistas > 100">
+            </td>
+        </tr>
+    </tbody>
+</table>

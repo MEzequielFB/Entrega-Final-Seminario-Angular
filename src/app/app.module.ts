@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AnimesListaComponent } from './animes-lista/animes-lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BtnFavoritoComponent } from './btn-favorito/btn-favorito.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BtnFavoritoComponent } from './btn-favorito/btn-favorito.component';
     InicioComponent,
     FooterComponent,
     AnimesListaComponent,
-    BtnFavoritoComponent
+    BtnFavoritoComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
