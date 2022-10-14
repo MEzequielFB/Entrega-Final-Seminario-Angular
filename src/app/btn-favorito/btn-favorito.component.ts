@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FavoritosService } from '../favoritos.service';
 
 @Component({
   selector: 'app-btn-favorito',
@@ -25,12 +24,12 @@ export class BtnFavoritoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  setearFavorito(favorito: boolean): void {
-    if (favorito) {
-      favorito = false;
+  setearFavorito(): void {
+    if (this.favorito) {
+      this.favorito = false;
       this.favoritosSeteado.emit("Sacado de favoritos");
     } else {
-      favorito = true;
+      this.favorito = true;
       this.favoritosSeteado.emit("Agregado a favoritos");
     }
     this.favoritoChange.emit(this.favorito);

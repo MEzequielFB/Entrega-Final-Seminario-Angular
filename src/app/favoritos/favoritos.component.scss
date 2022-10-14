@@ -1,0 +1,18 @@
+table {
+    text-align: center;
+    background-color: rgb(11, 84, 97);
+}
+table, tr, th, td {
+    border: 2px white solid;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 10px;
+}
+button {
+    padding: 10px;
+    background-color: rgb(58, 45, 87);
+    border: solid black 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}

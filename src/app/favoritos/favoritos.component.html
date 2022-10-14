@@ -4,6 +4,8 @@
         <tr>
             <th>Titulo</th>
             <th>Vistas</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -11,8 +13,10 @@
             <td>{{anime.titulo}}</td>
             <td>
                 {{anime.vistas}}
-                <img src="../../assets/img/icono premium hero.svg" alt="icono corona" *ngIf="anime.vistas > 100">
             </td>
+            <td *ngIf="anime.vistas > 100"><img src="../../assets/img/icono premium hero.svg" alt="icono corona"></td>
+            <td><app-btn-favorito [(favorito)]="anime.favorito" (favoritosSeteado)="gestionarFavoritos(anime, $event)"></app-btn-favorito></td>
         </tr>
     </tbody>
 </table>
+<p>Cantidad de favoritos: {{cantidad}}</p>

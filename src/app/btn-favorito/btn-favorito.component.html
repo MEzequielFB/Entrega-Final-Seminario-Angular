@@ -1,1 +1,5 @@
-<img src="../../assets/img/corazon-vacio.svg" alt="corazon" class="icono-corazon" (click)="setearFavorito(favorito)">
+<!-- <img src="../../assets/img/corazon-vacio.svg" alt="corazon" class="icono-corazon" (click)="setearFavorito()"> -->
+<button *ngIf="!favorito; else botonSacar" (click)="setearFavorito()">Agregar a favoritos</button>
+<ng-template #botonSacar>
+    <button (click)="setearFavorito()">Sacar de favoritos</button>
+</ng-template>
