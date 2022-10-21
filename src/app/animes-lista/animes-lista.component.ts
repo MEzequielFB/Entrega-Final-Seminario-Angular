@@ -25,13 +25,7 @@ export class AnimesListaComponent implements OnInit {
 
   gestionarFavoritos(anime: Anime, evento: any): void {
     this.favoritos_service.gestionarFavoritos(anime);
+    this.anime_data_service.setFavorito(anime).subscribe(anime_service => anime = anime_service);
     console.log(evento);
   }
-  /* setearFavorito(anime: Anime) {
-    if (anime.favorito) {
-      anime.favorito = false;
-    } else {
-      anime.favorito = true;
-    }
-  } */
 }

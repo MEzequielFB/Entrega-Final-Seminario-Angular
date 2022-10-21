@@ -15,4 +15,14 @@ export class AnimeDataService {
   getAllData(): Observable<Anime[]> {
     return this.http.get<Anime[]>(URL + "/animes");
   }
+
+  setFavorito(animeParam: Anime): Observable<Anime> {
+    const body = {
+      titulo: animeParam.titulo,
+      vistas: animeParam.vistas,
+      imagen: animeParam.imagen,
+      favorito: !animeParam.favorito
+    }
+    return this.http.put<Anime>(URL + "/animes/" + animeParam.id, body);
+  }
 }
